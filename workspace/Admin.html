@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Login</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <script>
+	function validateForm(){
+		var comp = document.forms["admin.form"]["admin.submit"].value;
+		if(comp ==null || comp==""){alert("Please Press Submit"); return false;}
+		else{alert("Taxi has been added to the database."); return true;}
+	}
+
+</script>
+    
+    <nav> 
+	<ul>
+  <li><a href="Homepage.html">Home</a></li>
+  <li><a href="Admin.html">Administration</a></li>
+  <li>
+      <form action= 'search.php' method = 'post'>
+      <input type="search_id" name="search_id" placeholder="Search Driver ID..."/>
+      <input type="submit" value="Search"/>
+  </li></form>
+</ul>
+
+</nav>
+
+    <body>
+        <center>
+        <h1>Driver Registration</h1>
+        <h2>Please enter details of driver to be added to the database</h2>
+        <div class="frm">
+        
+        <form action="/Admin.php" name= "admin.form" method="post" onsubmit="return validateForm()">
+            ID:             <input type="text" name="id" required aria-required='true'><br>
+            Name:           <input type="text" name="dvn" required aria-required='true'><br>
+            TRN:            <input type="text" name="trn" required aria-required='true'><br>
+            Email:          <input type="text" name="email" required aria-required='true'><br>
+            Address:        <input type="text" name="address" required aria-required='true'><br>
+            Number:         <input type="text" name="number" required aria-required='true'><br>
+            Car Make:       <input type="text" name="carmake" required aria-required='true'><br>
+            Car Model:      <input type="text" name="carmodel" required aria-required='true'><br>
+            Car Year:       <input type="text" name="cy" required aria-required='true'><br>
+            Car Colour:     <input type="text" name="cc" required aria-required='true'><br>
+            License Plate:  <input type="text" name="lp" required aria-required='true'><br>
+            <input type="submit" name ="admin.submit" value="Submit">
+        </form>
+        <center>
+            </div>
+        
+    </body>
+    
+</html>

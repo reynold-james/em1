@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<script
+			 src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="admin.js"></script>
+		<style type="text/css">
+			
+			body{
+				 background-color: #efefef;
+			}
+			
+			table tr th, table tr td {
+			    padding: 10px;
+			}
+			
+			
+			table, th, td {
+			    border: 1px solid black;
+			}
+		</style>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<h1 id="Heading"> Taxi Request Page</h1>
+
+	</head>
+<script>
+	function validateForm(){
+		var comp = document.forms["customer.form"]["contact-form-id"].value;
+		if(comp ==null || comp==""){alert("Please Press Submit"); return false;}
+		else{alert("Please Wait while we get you a taxi"); return true;}
+	}
+
+</script>
+	<style>
+	body {
+		background-color: #efefef;
+	}
+		
+	</style>
+	
+<nav> 
+	<ul>
+  <li><a href="Homepage.html">Home</a></li>
+  <li><a href="Customer.html">Request Taxi!</a></li>
+  <li><a href="Feedback.html">Feedback</a></li>
+</ul>
+
+</nav>
+
+<body id="Body">
+<form
+action="customer.php"
+method="post"
+name="customer.form"
+onsubmit="return validateForm()">
+<div>
+		<label for='g2-name' class='grunion-field-label name'>First Name<span>(required)</span></label>
+		<input type='text' name='g2-name' id='g2-name' class='name'  required aria-required='true'/>
+	</div>
+
+<div>
+		<label for='g2-contactnumber' class='grunion-field-label text'>Contact Number <span>(required)</span></label>
+		<input type='text' name='g2-contactnumber' id='g2-contactnumber' value='' class='text'  required aria-required='true'/>
+	</div>
+
+<div>
+		<label for='g2-currentlocation' class='grunion-field-label text'>Current Location<span>(required)</span></label>
+		<input type='text' name='g2-currentlocation' id='g2-currentlocation' value='' class='text'  required aria-required='true'/>
+	</div>
+
+<div>
+		<label for='contact-form-comment-g2-destination' class='grunion-field-label textarea'>Destination<span>(required)</span></label>
+		<input type='text' name='contact-form-comment-g2-destination' id='contact-form-comment-g2-destination' value='' class='text'  required aria-required='true'/>
+	</div>
+
+<div>
+		<label for='g2-timeofpickup' class='grunion-field-label select'>Time of Pick Up<span>(required)</span></label>
+	<select name='g2-timeofpickup' id='g2-timeofpickup' class='select' required aria-required='true'>
+		<option>Now</option>
+		<option>5-10 mins</option>
+		<option>15 mins</option>
+		<option>30 mins</option>
+		<option>1 hr</option>
+	</select>
+	</div>
+
+<div>
+		<label for='g2-numberofpersonstraveling' class='grunion-field-label select'>Number of Persons Traveling<span>(required)</span></label>
+	<select name='g2-numberofpersonstraveling' id='g2-numberofpersonstraveling' class='select' required aria-required='true'>
+		<option>1</option>
+		<option>2-3</option>
+		<option>4-6</option>
+		<option>6+ persons</option>
+	</select>
+	</div>
+
+<div>
+		<label for='g2-specialdriverrequest' class='grunion-field-label text'>Special Driver Request </label>
+		<input type='text' name='g2-specialdriverrequest' id='g2-specialdriverrequest' value='' class='text'  />
+	</div>
+	<p class='contact-submit'>
+		<input type='submit' value='Submit &#187;' class='pushbutton-wide' id='sub'/>
+		<input type="hidden" id="_wpnonce" name="_wpnonce" value="f3814e582a" /><input type="hidden" name="_wp_http_referer" value="/requesttaxi/?preview=true&amp;frame-nonce=55686b9b42&amp;iframe=true&amp;theme_preview=true&amp;cachebust=0&amp;calypso_token=14813251-994f-4fa0-865c-bb9853046794" />
+		<input type='hidden' name='contact-form-id' value='2' />
+		<input type='hidden' name='action' value='grunion-contact-form' />
+	</p>
+</form>
+<div id="Assigned1">
+	
+</div>
+
+
+</body>
+</html>
